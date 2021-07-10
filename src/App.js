@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=co&category=${categoria}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+      const url = `https://gnews.io/api/v4/top-headlines?&lang=es&topic=${categoria}&token=${process.env.REACT_APP_NEWS_API_KEY}`;
 
       const respuesta = await fetch(url);
       const noticias = await respuesta.json();

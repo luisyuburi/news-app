@@ -6,7 +6,7 @@ import useSelect from "../hooks/useSelect";
 
 const Formulario = ({ guardarCategoria }) => {
   const OPCIONES = [
-    { value: "general", label: "General" },
+    { value: "breaking-news", label: "Ultimas Noticias" },
     { value: "business", label: "Negocios" },
     { value: "entertainment", label: "Entretenimiento" },
     { value: "health", label: "Salud" },
@@ -16,7 +16,7 @@ const Formulario = ({ guardarCategoria }) => {
   ];
 
   // Utilizar custom hook
-  const [categoria, SelectNoticias] = useSelect("general", OPCIONES);
+  const [categoria, SelectNoticias] = useSelect("breaking-news", OPCIONES);
 
   // Submit al form, pasar categoria a App.js
   const buscarNoticias = (e) => {
